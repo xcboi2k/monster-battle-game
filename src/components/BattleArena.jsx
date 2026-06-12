@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/BattleArena.css'
 import HealthBar from './HealthBar'
 import MonsterSprite from './MonsterSprite'
@@ -9,6 +8,8 @@ export default function BattleArena({
 }) {
     return (
         <div className="battle-arena">
+
+            {/* Enemy */}
             <div className="enemy-info">
                 <HealthBar
                     name={enemy.name}
@@ -24,10 +25,9 @@ export default function BattleArena({
                 />
             </div>
 
+            {/* Player */}
             <div className="player-sprite">
-                <MonsterSprite
-                    monster={player}
-                />
+                <MonsterSprite monster={player} />
             </div>
 
             <div className="player-info">

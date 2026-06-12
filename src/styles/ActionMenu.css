@@ -10,9 +10,25 @@
 }
 
 .action-menu button {
-    padding: 12px;
-
-    font-size: 18px;
+    margin: 6px;
+    padding: 10px 14px;
 
     cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.action-menu button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+    filter: grayscale(1);
+}
+
+.battle-log-box {
+    font-size: 16px;
+    font-weight: bold;
+
+    text-align: center;
+
+    animation: fadeIn 0.2s ease;
 }

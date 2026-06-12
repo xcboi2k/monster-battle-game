@@ -11,27 +11,12 @@
 }
 
 .hit {
-    animation: monster-hit 0.3s ease;
+    animation: hit 0.3s;
 }
 
-@keyframes monster-hit {
-    0% {
-        transform: translateX(0);
-    }
-
-    25% {
-        transform: translateX(-10px);
-    }
-
-    50% {
-        transform: translateX(10px);
-    }
-
-    75% {
-        transform: translateX(-10px);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
+@keyframes hit {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    100% { transform: translateX(0); }
 }
