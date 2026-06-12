@@ -1,4 +1,4 @@
-import '..styles/MonsterSprite.css'
+import '../styles/MonsterSprite.css'
 
 export default function MonsterSprite({
     monster,

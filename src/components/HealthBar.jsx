@@ -1,4 +1,4 @@
-import '..styles/HealthBar.css';
+import '../styles/HealthBar.css';
 
 export default function HealthBar({
     name,

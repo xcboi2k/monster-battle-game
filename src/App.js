@@ -1,24 +1,36 @@
 import logo from './logo.svg';
 import './App.css';
+import ActionMenu from './components/ActionMenu';
+import BattleArena from './components/BattleArena';
+import VictoryModal from './components/VictoryModal';
+import BattleLog from './components/BattleLog';
+import useBattle from './hooks/useBattle';
 
 function App() {
+  const { player, enemy, battleLog, winner, attack, heal, run, restartBattle } = useBattle()
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <div className="game">
+      <BattleArena
+          player={player}
+          enemy={enemy}
+      />
+
+      <BattleLog
+          messages={battleLog}
+      />
+
+      <ActionMenu
+          onAttack={attack}
+          onHeal={heal}
+          onRun={run}
+      />
+      {winner && (
+        <VictoryModal
+            winner={winner}
+            onRestart={restartBattle}
+        />
+      )}
+  </div>
   );
 }
 
