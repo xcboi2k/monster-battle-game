@@ -1,0 +1,37 @@
+.monster-sprite {
+    font-size: 120px;
+
+    user-select: none;
+
+    transition: transform 0.25s ease;
+}
+
+.monster-sprite.enemy {
+    transform: scaleX(-1);
+}
+
+.hit {
+    animation: monster-hit 0.3s ease;
+}
+
+@keyframes monster-hit {
+    0% {
+        transform: translateX(0);
+    }
+
+    25% {
+        transform: translateX(-10px);
+    }
+
+    50% {
+        transform: translateX(10px);
+    }
+
+    75% {
+        transform: translateX(-10px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
